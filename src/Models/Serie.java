@@ -1,14 +1,14 @@
 package Models;
 
 public class Serie extends Titulo{
-
     private int temporadas;
     private int epPorTemporada;
     private int minutosPorEpisodio;
     private boolean recebeEpisodiosSemanais;
 
+    // ----- CONSTRUTOR ---------
     public Serie(String nome, int anoDeLancamento, String sinopse,
-                 boolean incluidoNoPlano, int temporadas, int epPorTemporada, int minutosPorEpisodio) {
+                 boolean recebeEpisodiosSemanais, int temporadas, int epPorTemporada, int minutosPorEpisodio, boolean incluidoNoPlano) {
         super(nome, anoDeLancamento, temporadas * epPorTemporada * minutosPorEpisodio, sinopse, incluidoNoPlano);
         this.temporadas = temporadas;
         this.epPorTemporada = epPorTemporada;
@@ -16,6 +16,7 @@ public class Serie extends Titulo{
         this.recebeEpisodiosSemanais = recebeEpisodiosSemanais;
     }
 
+    // ----- GETTERS E SETTERS ------
     @Override
     public int getDuracaoEmMinutos() {
         return getTemporadas() * getEpPorTemporada() * getMinutosPorEpisodio();

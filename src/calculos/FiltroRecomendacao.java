@@ -1,9 +1,6 @@
 package calculos;
 
-import Models.Titulo;
-
 public class FiltroRecomendacao {
-    private  String recomendacao;
 
     public void filtro(Classificavel classificavel){
         if (classificavel.getClassificacao() >= 4){

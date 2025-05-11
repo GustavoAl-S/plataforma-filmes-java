@@ -10,6 +10,7 @@ public class Episodio implements Classificavel {
     private Serie serie;
     private int visualizacoes;
 
+    // ----- CONSTRUTOR ---------
     public Episodio(String nome, String resumo, double duracao, int numero, Serie serie, int visualizacoes) {
         this.nome = nome;
         this.resumo = resumo;
@@ -17,6 +18,16 @@ public class Episodio implements Classificavel {
         this.numero = numero;
         this.serie = serie;
         this.visualizacoes = visualizacoes;
+    }
+
+    // ----- GETTERS E SETTERS ------
+    @Override
+    public int getClassificacao() {
+        if (visualizacoes > 100){
+            return 4;
+        } else {
+            return 0;
+        }
     }
 
     public int getVisualizacoes() {
@@ -65,14 +76,5 @@ public class Episodio implements Classificavel {
 
     public void setSerie(Serie serie) {
         this.serie = serie;
-    }
-
-    @Override
-    public int getClassificacao() {
-        if (visualizacoes > 100){
-            return 4;
-        } else {
-            return 0;
-        }
     }
 }

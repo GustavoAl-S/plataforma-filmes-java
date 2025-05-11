@@ -19,13 +19,13 @@ public class Main {
         // Filme 2
         System.out.println();
         Filme filme2 = new Filme("Como treinar seu Dragão", 2001, 120,
-                null, true, null);;
+                null, true, null);
         System.out.println(filme2.exibeFichaTecnica());
 
         // Serie 1
         System.out.println();
         Serie serie1 = new Serie("The Last of Us", 2022, "Serie baseada no jogo",
-                true, 2, 10, 60);
+                true, 2, 10, 60, true);
         System.out.println(serie1.exibeFichaTecnica());
 
         System.out.println();
@@ -51,5 +51,9 @@ public class Main {
         listaFilmes.add(filme2);
         System.out.println("Tamanho da lista: " + listaFilmes.size());
         System.out.println("Filme: " + listaFilmes.get(0).getNome());
+
+        // Utilizando o toString( ) após subsescrever ele na Class filme
+        System.out.println(listaFilmes);
+
     }
 }

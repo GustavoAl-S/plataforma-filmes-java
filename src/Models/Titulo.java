@@ -1,18 +1,15 @@
 package Models;
 
 public class Titulo {
-
     private String nome;
     private int anoDeLancamento;
     private int duracaoEmMinutos;
     private String sinopse;
-
     private boolean incluidoNoPlano;
-
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
 
-
+    // ---- METODOS -----
     public Titulo(String nome, int anoDeLancamento, int duracaoEmMinutos, String sinopse, boolean incluidoNoPlano) {
         this.nome = nome;
         this.anoDeLancamento = anoDeLancamento;
@@ -29,8 +26,6 @@ public class Titulo {
                 "Incluído no plano: " + incluidoNoPlano;
     }
 
-    // METODOS SAO COISAS QUE UM TITULO "FAZ"
-
     public void avaliacao(double nota) {
         somaDasAvaliacoes += nota;
         totalDeAvaliacoes++;
@@ -40,7 +35,8 @@ public class Titulo {
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
-    // GETTERS E SETTERS
+
+    // ----- GETTERS E SETTERS ------
     public String getNome() {
         return nome;
     }
@@ -64,7 +60,6 @@ public class Titulo {
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
-
 
     public String getSinopse() {
         return sinopse;
