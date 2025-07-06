@@ -1,6 +1,6 @@
 package Models;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
     private String nome;
     private int anoDeLancamento;
     private int duracaoEmMinutos;
@@ -35,6 +35,13 @@ public class Titulo {
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
+    // Implementação do metodo para comparar Titulos e assim
+    // poder organiza-los em ordem alfabetica
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().
+                compareTo(outroTitulo.getNome());
+    }
 
     // ----- GETTERS E SETTERS ------
     public String getNome() {

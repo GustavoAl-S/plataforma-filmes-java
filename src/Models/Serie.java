@@ -16,6 +16,11 @@ public class Serie extends Titulo{
         this.recebeEpisodiosSemanais = recebeEpisodiosSemanais;
     }
 
+    @Override
+    public String toString() {
+        return "Serie: "+ this.getNome() + " (" + getAnoDeLancamento() + ")";
+    }
+
     // ----- GETTERS E SETTERS ------
     @Override
     public int getDuracaoEmMinutos() {

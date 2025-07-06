@@ -34,17 +34,8 @@ public class MainList {
                 System.out.println("Classificacao: " + filme.getClassificacao());
             }
         }
-
-        ArrayList<String> pessoas = new ArrayList<>();
-        pessoas.add("Adam Sandler");
-        pessoas.add("Mark Zuckerberg");
-        pessoas.add("Gustavo Lima");
-
-        System.out.println(pessoas);
-        Collections.sort(pessoas);
-        System.out.println("Depois de ordenar");
-        System.out.println(pessoas);
-
+        System.out.println("Titulos ordenados: ");
+        Collections.sort(lista);
+        System.out.println(lista);
     }
-
 }
